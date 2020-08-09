@@ -12,7 +12,7 @@ This project features a mostly simple React App. The real magic happens in `src/
 
 #### Functionalities
 
-  - Allow a user to login and verify authorization to access that account.
+  - Allow a user to login and verify authorization to access account.
   - The fetch API is used to handle a GET request which retrieves a list of all known breaches containing user's personal information.
   - The total list of breaches is then filtered to only incidents where "sensitive" information is disclosed and which occurred ***AFTER*** the user's last login date.
   - This code does not need to be concerned with breaches which happened ***BEFORE*** our last login. Like it is doing now, this software would have made the user aware of all recent pertinent breaches since the prior time the user logged in.
@@ -27,6 +27,3 @@ This project features a mostly simple React App. The real magic happens in `src/
 - HTML5
 - CSS5
 - Bootstrap 4
-
-### Notes
-
