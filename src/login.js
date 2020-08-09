@@ -21,8 +21,8 @@ async function login(email, password) {
     // Async function to fetch all breaches associated with this account.
     (async function fetchBreaches () {
       const queryString = '?truncateResponse=false';
-      //In most cases to access this API, you will need to authenticate your own API as will as receive an API Key.
-      //The one provided below was just an example and will not work. Follow the instructions in these docs to construct your own custom API urls: https://haveibeenpwned.woventeams.com/api/v3#BreachModel
+      //In most cases to access this API, you will need you own authenticated API as well as API Key.
+      //The one provided below in the fetch statement was just an example and will not work. Follow the instructions in these docs to receive an authenticated API and API Keys: https://haveibeenpwned.woventeams.com/api/v3#BreachModel
       //Remember to append the `queryString` combining the parameter and value of  `truncateResponse` and false respectively, to the end of the url. Take a look at the `queryString' variable above to see what it should look like.
       const response = await fetch(`https://haveibeenpwned.woventeams.com/${queryString}`)
       .then(response => {
