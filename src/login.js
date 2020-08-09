@@ -19,7 +19,7 @@ async function login(email, password) {
   let breaches, copy;
   if (account) {
     // Async function to fetch all breaches associated with this account.
-    async function fetchBreaches () {
+    (async function fetchBreaches () {
       const queryString = '?truncateResponse=false';
       //In most cases to access this API, you will need to authenticate your own API as will as receive an API Key.
       //The one provided below was just an example and will not work. Follow the instructions in these docs to construct your own custom API urls: https://haveibeenpwned.woventeams.com/api/v3#BreachModel
@@ -35,10 +35,9 @@ async function login(email, password) {
       }).then(jsonResponse => {
           return breaches = jsonResponse;
       })
-    }
-    fetchBreaches();
-    copy = JSON.parse(JSON.stringify(breaches));
+    })()
     
+    copy = JSON.parse(JSON.stringify(breaches));
     copy = copy.filter(breach => !breach["IsSensitive"] && breach["DataClasses"].includes("Passwords") && Date.parse(breach["AddedDate"]) >  Date.parse(account.lastLogin));
     const createBreaches = () => {
       let results = [];
