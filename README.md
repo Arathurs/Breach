@@ -19,7 +19,7 @@ This project features a mostly simple React App. The real magic happens in `src/
   - `login.js` then returns the filtered list for user display to our React Frontend, along with suggested actions such as changing passwords.
 
 
-### Technologies Used
+#### Technologies Used
 - React
 - ReactDOM
 - JavaScript ES2015/ES6+
@@ -28,4 +28,5 @@ This project features a mostly simple React App. The real magic happens in `src/
 - CSS5
 - Bootstrap 4
 
+### Notes
 
