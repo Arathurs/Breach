@@ -1,7 +1,8 @@
+//Comment out sample imported data used to test our function logic before fetching real data
 import {
-  users as sampleUsers,
+  users as sampleUsers/*,
   breaches as sampleBreaches,
-  response as sampleResponse
+  response as sampleResponse*/
 } from "./sample";
 
 function authenticate(email, password) {
@@ -26,15 +27,16 @@ async function login(email, password) {
       const response = await fetch(`https://haveibeenpwned.woventeams.com/${queryString}`)
       .then(response => {
           if(response.ok) {
-              response.json();
+            return response.json();
           }
           throw new Error('Request failed!');
       }, (networkError) => {
           console.log(networkError.message);
       }).then(jsonResponse => {
-          breaches = jsonResponse;
+          return breaches = jsonResponse;
       })
     }
+    fetchBreaches();
     copy = JSON.parse(JSON.stringify(breaches));
     
     copy = copy.filter(breach => !breach["IsSensitive"] && breach["DataClasses"].includes("Passwords") && Date.parse(breach["AddedDate"]) >  Date.parse(account.lastLogin));
