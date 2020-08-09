@@ -8,7 +8,7 @@ Data breaches are a common and persistent problem. Hackers routinely gain access
 
 Data breaches often arise from completely separate and unrelated software, yet can still be catastrophic. Breaches allows bad actors to gain access to your personal information. And perhaps even worse, many users reuse login credentials like usernames and passwords for mulitple different services. So public release of a password to one site, may possibly the release of the password for almost every important service that user accesses.
 
-This project features a mostly simple React App. The real magic happens in `src/login.js` which contains logic to swiftly determine and alert a user of any pertinent data breach of their personal information from third party websites. `login.js` fetches a a list of all breaches from an external API, which hosts a central location for reported data breaches from various sources. It then filters these breaches to show any each specific user any breaches which might be relevant to them or contain worrisome information.
+This project features a mostly simple React App. The real magic happens in `src/login.js` which contains logic to swiftly determine and alert a user of any pertinent data breach of their personal information from third party websites. `login.js` fetches a a list of all breaches from an external API, which hosts a central location for reported data breaches from various sources. It then filters these breaches to show each specific user any breaches which might be relevant to them or contain worrisome personal information.
 
 #### Functionalities
 
