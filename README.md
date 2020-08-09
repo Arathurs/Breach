@@ -15,7 +15,7 @@ This project features a mostly simple React App. The real magic happens in `src/
   - Allow a user to login and verify authorization to access that account.
   - The fetch API is used to handle a GET request which retrieves a list of all known breaches containing user's personal information.
   - The total list of breaches is then filtered to only incidents where "sensitive" information is disclosed and which occurred ***AFTER*** the user's last login date.
-  - This code need to be concerned with breaches which happened ***BEFORE*** our last login. Like it is doing now, this software would have made the user aware of all recent pertinent breaches the user didn't have a chance to see yet.
+  - This code does not need to be concerned with breaches which happened ***BEFORE*** our last login. Like it is doing now, this software would have made the user aware of all recent pertinent breaches since the prior time the user logged in.
   - `login.js` then returns the filtered list to our React Frontend for display to the user, along with strongly suggested actions such as changing passwords.
 
 
